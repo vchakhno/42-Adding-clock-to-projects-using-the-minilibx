@@ -64,9 +64,7 @@ There are the two common workarounds to compensate for the lack of time measurem
 - Tying animations to user input
 - Tying animation to a frame counter
 
-As for movement, let's first explore what means tying animation to input. We'll explore frame counters later on.
-
-Counter-based animations implies that every time the user presses a key or interacts with the mouse, a frame goes by. And reciprocly, when the user isn't doing anything, the whole game is frozen.
+Input-based animations implies that every time the user presses a key or interacts with the mouse, a frame goes by. And reciprocly, when the user isn't doing anything, the whole game is frozen.
 
 This can hardly be called animations, as the images don't change on their own. It requires bending definitions a bit, and it is only considered a solution because subjects have unclear/soft requirements.
 Certainly, this solution isn't ideal, and it is only a patch made to compensate the lack of time measurement.
