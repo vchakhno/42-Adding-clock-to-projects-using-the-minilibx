@@ -27,7 +27,7 @@ However when designing games or graphical applications, measuring time is actual
 
 ## 2.1. Movement
 
-Movements are part of the requirements for so_long, FdF, fract-ol, and cub3D - with miniRT being the only one left out.
+Movements are part of the requirements for so_long, FdF, fract-ol, cub3D and miniRT.
 
 | Project  | Requirements about movement                                                                                       |
 |----------|-------------------------------------------------------------------------------------------------------------------|
@@ -35,6 +35,7 @@ Movements are part of the requirements for so_long, FdF, fract-ol, and cub3D - w
 | FdF      | ![FdF's requires zoom, translation and rotation](images/movement-FdF.png)                                         |
 | fract-ol | ![fract-ol requires zooming with the mouse and moving the view with the arrow keys](images/movement-fract-ol.png) |
 | cub3D    | ![cub3D's requires movement with WASD and rotation with arrows](images/movement-cub3D.png)                        |
+| miniRT   | ![miniRT requires translation and rotation](images/movement-miniRT.png)                        |
 
 There are two ways to code movement:
 - Jagged movement, with step by step teleportation
