@@ -29,7 +29,7 @@ However when designing games or graphical applications, measuring time is actual
 
 Movements are part of the requirements for so_long, FdF, fract-ol, and cub3D - with miniRT being the only one left out.
 
-| Project  | Requirement                                                                                                       |
+| Project  | Requirements about movement                                                                                       |
 |----------|-------------------------------------------------------------------------------------------------------------------|
 | so_long  | ![so_long's requires movement with WASD](images/movement-so_long.png)                                             |
 | FdF      | ![FdF's requires zoom, translation and rotation](images/movement-FdF.png)                                         |
@@ -52,7 +52,7 @@ However Cub3D is a first person game, and so users expect to have smooth movemen
 
 As previously mentionned, animations also rely on time measurements. They are part of the requirement of the subjects of both so-long and cub3D:
 
-| Project | Requirement                                                                               |
+| Project | Requirements about animation                                                              |
 |---------|-------------------------------------------------------------------------------------------|
 | so_long | ![so_long's requirements state "Add some sprite animation"](images/animation-so_long.png) |
 | cub3D   | ![cub3D's requirements state "animated sprite"](images/animation-cub3D.png)               |
