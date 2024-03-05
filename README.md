@@ -7,13 +7,7 @@ The common core currently features 5 projects said to be graphical:
 - cub3D
 - MiniRT
 
-For these projects a common set of functions is allowed:
-- functions of the libft
-- functions of the libm
-- open and close
-- functions of the minilibx
-
-This proposal aims to add clock or gettimeofday to the list of allowed functions.
+This proposal aims to add either clock or gettimeofday to the list of allowed functions for the mandatory part of these projects.
 
 # 1. Introduction
 
@@ -27,21 +21,30 @@ However, the documentation of each of these libraries also include time handling
 
 Certainly, when all you want is to draw to the screen, getting the current time isn't necessary. And hundreds of students have validated the previously mentionned projects during the last few years, which shows that time handling itself isn't necessary for their completion.
 
-# 2. Current issues
-
 However when designing games or graphical applications, measuring time is actually important. Notably, time affects animations, movement and framerate. It comes off as no surprise that time handling is mentionned early in those other graphical libraries.
+
+# 2. Current issues
 
 ## 2.1. Movement
 
 Movements are part of the requirements for so-long, FdF, fract-ol, and cub3D - with miniRT being the only one left out.
 
-[insert the necessary screens]
+| Project  | Requirement                                                                                                       |
+|----------|-------------------------------------------------------------------------------------------------------------------|
+| so_long  | ![so_long's requires movement with WASD](images/movement-so_long.png)                                             |
+| FdF      | ![FdF's requires zoom, translation and rotation](images/movement-FdF.png)                                         |
+| fract-ol | ![fract-ol requires zooming with the mouse and moving the view with the arrow keys](images/movement-fract-ol.png) |
+| cub3D    | ![cub3D's requires movement with WASD and rotation with arrows](images/movement-cub3D.png)                        |
 
 There are two ways to code movement:
 - Jagged movement, with step by step teleportation
+
+![A character walking by teleporting a tile at a time](gifs/jagged.gif)
 - Smooth movement, with either time measurement or a frame counter (we will talk about that later).
 
-Admittedly, movement doesn't have to be smooth. Jagged movement doesn't need time measurements - at the cost of being very unpractical for the user. Jagged movement is as far as I've seen the prefered solution for so-long, FdF and fract-ol, as it is easier to code, and time measurement isn't available anyways.
+![A character walking smoothly](gifs/smooth.gif)
+
+Admittedly, movement doesn't have to be smooth. Jagged movement doesn't need time measurements - <b>at the cost of being very unpractical for the user</b>. Jagged movement is as far as I've seen the prefered solution for so-long, FdF and fract-ol, as it is easier to code, and time measurement isn't available anyways.
 
 However Cub3D is a first person game, and so users expect to have smooth movement. Jagged movement for this project is especially awkard and unfitting.
 
@@ -49,9 +52,11 @@ However Cub3D is a first person game, and so users expect to have smooth movemen
 
 As previously mentionned, animations also rely on time measurements. They are part of the requirement of the subjects of both so-long and cub3D:
 
-[insert a screen of so long's subject here]
+| Project | Requirement                                                                               |
+|---------|-------------------------------------------------------------------------------------------|
+| so_long | ![so_long's requirements state "Add some sprite animation"](images/animation-so_long.png) |
+| cub3D   | ![cub3D's requirements state "animated sprite"](images/animation-cub3D.png)               |
 
-[insert a screen of cub3d's subject here]
 
 Probably due to the absence of time measurement functions, a lot of students are lost as to how they should implement animations. I often browse discord and discuss subjects with other students there.
 
@@ -151,6 +156,9 @@ Real time mesurement with clock will bring improvements on quite a few points.
 - Animated fractals will now become possible in fract-ol. Animated fractals are absolutely beautiful and it's a shame that the current subject prevents them. Because fract-ol is very framerate-inconsistent, the previously mentionned workarounds cannot apply.
 - Measuring time makes it possible to stop heavy computations early, such as for fract-ol and MiniRT. Most fract-ols currently show very noticeable lag spikes, of sometimes 10 seconds or more, when zooming, because of heavy computations. Measuring time and stopping calculations early would keep the program running smoothly.
 - Animated menus, enemies and environement would lead to more expressive power.
+
+A simple animated fractal:
+![Zoom on the mandelbrot set with colored maves emanating from the fractal](gifs/fractol3.gif)
 
 ## 4.3 Downsides
 
