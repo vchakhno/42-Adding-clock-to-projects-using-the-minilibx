@@ -21,7 +21,7 @@ However, the documentation of each of these libraries also include time handling
 
 Certainly, when all you want is to draw to the screen, getting the current time isn't necessary. And hundreds of students have validated the previously mentionned projects during the last few years, which shows that time handling itself isn't necessary for their completion.
 
-However when designing games or graphical applications, measuring time is actually important. Notably, time affects animations, movement and framerate. It comes off as no surprise that time handling is mentionned early in those other graphical libraries.
+However when designing games or graphical applications, measuring time is actually important. Notably, <b>time affects animations, movement and framerate</b>. It comes off as no surprise that time handling is mentionned early in those other graphical libraries.
 
 # 2. Current issues
 
