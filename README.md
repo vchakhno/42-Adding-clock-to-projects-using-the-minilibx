@@ -1,13 +1,13 @@
 # Preface
 
 The common core currently features 5 projects said to be graphical:
-- so-long
+- so_long
 - FdF
 - fract-ol
 - cub3D
-- MiniRT
+- miniRT
 
-This proposal aims to add either clock or gettimeofday to the list of allowed functions for the mandatory part of these projects.
+This proposal aims to add either `clock` or `gettimeofday` to the list of allowed functions for the mandatory part of these projects.
 
 # 1. Introduction
 
@@ -27,7 +27,7 @@ However when designing games or graphical applications, measuring time is actual
 
 ## 2.1. Movement
 
-Movements are part of the requirements for so-long, FdF, fract-ol, and cub3D - with miniRT being the only one left out.
+Movements are part of the requirements for so_long, FdF, fract-ol, and cub3D - with miniRT being the only one left out.
 
 | Project  | Requirement                                                                                                       |
 |----------|-------------------------------------------------------------------------------------------------------------------|
@@ -94,7 +94,7 @@ In the end, frame counters are just a patch to compensate for what really lacks:
 
 ## 2.4. Concerning bonuses
 
-Out of the five graphical projects, four allow users to add other functions in their bonuses: so_long, FdF (english subject only), Cub3D and MiniRT. And so it is possible to use clock and gettimeofday for the bonuses - except for fract-ol.
+Out of the five graphical projects, four allow users to add other functions in their bonuses: so_long, FdF (english subject only), cub3D and miniRT. And so it is possible to use clock and gettimeofday for the bonuses - except for fract-ol.
 
 What I have been advocating for all this time is that real time measurement shouldn't be bonus-only. Time plays a big role in graphical applications.
 
@@ -104,12 +104,12 @@ From an educational standpoint, I don't think it is a right idea to force these 
 
 # 3. Proposed solution
 
-The solution this proposal brings, is to ask for the addition of clock() or gettimeofday() in the list of allowed functions in the mandatory part of each graphical project.
+The solution this proposal brings, is to ask for the addition of `clock` or `gettimeofday` in the list of allowed functions in the mandatory part of each graphical project.
 
 ## 3.1. Adding clock
 
-clock (see man 3 clock) is part of the Standard C library. It is declared in time.h.
-clock permits precise time measurement, with generally microsecond precision.
+`clock` (see man 3 clock) is part of the Standard C library. It is declared in time.h.
+`clock` permits precise time measurement, with generally microsecond precision.
 
 Here's an example usage:
 ```C
@@ -127,11 +127,11 @@ The above example shows how to implement smooth movement based on real time meas
 
 ## 3.2. Adding gettimeofday
 
-Other than clock() there is another option, already present in Philosophers:
+Other than `clock` there is another option, already present in Philosophers:
 
-gettimeofday (see man 2 gettimeofday and man 3 gettimeofday) is part of the POSIX interface. It is declared in sys/time.h. It provides the date, as well as time measurement with microsecond precision. However the man warns that there may be discontinuities in time.
+`gettimeofday` (see man 2 gettimeofday and man 3 gettimeofday) is part of the POSIX interface. It is declared in sys/time.h. It provides the date, as well as time measurement with microsecond precision. However the man warns that there may be discontinuities in time.
 
-I've seen that in Philosophers, gettimeofday was prioritized over clock (which would be more appropriate). I considered that this choice might be due to factors out of my knowledge. Overral gettimeofday still works as intended, so it would be an acceptable alternative to clock.
+I've seen that in Philosophers, `gettimeofday` was prioritized over clock (which would be more appropriate). I considered that this choice might be due to factors out of my knowledge. Overall `gettimeofday` still works as intended, so it would be an acceptable alternative to `clock`.
 
 
 # 4. Impact of changes
@@ -150,9 +150,9 @@ Real time mesurement with clock will bring improvements on quite a few points.
 - Smoother movements or framerate fixing also leads to a better user-experience, which is a + for evaluators.
 ### 4.2.2 Creativity improvements
 
-- It will now be possible for students to code smooth movements in so_long, FdF, fract-ol and Cub3D.
+- It will now be possible for students to code smooth movements in so_long, FdF, fract-ol and cub3D.
 - Animated fractals will now become possible in fract-ol. Animated fractals are absolutely beautiful and it's a shame that the current subject prevents them. Because fract-ol is very framerate-inconsistent, the previously mentionned workarounds cannot apply.
-- Measuring time makes it possible to stop heavy computations early, such as for fract-ol and MiniRT. Most fract-ols currently show very noticeable lag spikes, of sometimes 10 seconds or more, when zooming, because of heavy computations. Measuring time and stopping calculations early would keep the program running smoothly.
+- Measuring time makes it possible to stop heavy computations early, such as for fract-ol and miniRT. Most fract-ols currently show very noticeable lag spikes, of sometimes 10 seconds or more, when zooming, because of heavy computations. Measuring time and stopping calculations early would keep the program running smoothly.
 - Animated menus, enemies and environement would lead to more expressive power.
 
 A simple animated Mandelbrot fractal:
