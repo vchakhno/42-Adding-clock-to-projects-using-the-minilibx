@@ -157,7 +157,7 @@ Real time mesurement with clock will bring improvements on quite a few points.
 - Measuring time makes it possible to stop heavy computations early, such as for fract-ol and MiniRT. Most fract-ols currently show very noticeable lag spikes, of sometimes 10 seconds or more, when zooming, because of heavy computations. Measuring time and stopping calculations early would keep the program running smoothly.
 - Animated menus, enemies and environement would lead to more expressive power.
 
-A simple animated fractal:
+A simple animated Mandelbrot fractal:
 ![Zoom on the mandelbrot set with colored maves emanating from the fractal](gifs/fractol3.gif)
 
 ## 4.3 Downsides
