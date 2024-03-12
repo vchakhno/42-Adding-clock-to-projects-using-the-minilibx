@@ -11,7 +11,7 @@ This proposal aims to add either `clock` or `gettimeofday` to the list of allowe
 
 # 1. Introduction
 
-Let's go back a bit to the list of allowed functions and take a look at the minilibx.
+These 5 graphical projects all use the same base: the minilibx.
 
 The minilibx is a minimalist C library provided by 42 in order to make graphic programming accessible to beginners. It features window creation, image decoding and simple input handling. The code is architectured around a game loop in mlx_loop, which repeatedly calls "hooks" defined by the programmer.
 
@@ -31,10 +31,10 @@ Movements are part of the requirements for so_long, FdF, fract-ol, cub3D and min
 
 | Project  | Requirements about movement                                                                                       |
 |----------|-------------------------------------------------------------------------------------------------------------------|
-| so_long  | ![so_long's requires movement with WASD](images/movement-so_long.png)                                             |
-| FdF      | ![FdF's requires zoom, translation and rotation](images/movement-FdF.png)                                         |
+| so_long  | ![so_long requires movement with WASD](images/movement-so_long.png)                                             |
+| FdF      | ![FdF requires zoom, translation and rotation](images/movement-FdF.png)                                         |
 | fract-ol | ![fract-ol requires zooming with the mouse and moving the view with the arrow keys](images/movement-fract-ol.png) |
-| cub3D    | ![cub3D's requires movement with WASD and rotation with arrows](images/movement-cub3D.png)                        |
+| cub3D    | ![cub3D requires movement with WASD and rotation with arrows](images/movement-cub3D.png)                        |
 | miniRT   | ![miniRT requires translation and rotation](images/movement-miniRT.png)                        |
 
 There are two ways to code movement:
@@ -59,7 +59,7 @@ As previously mentionned, animations also rely on time measurements. They are pa
 | cub3D   | ![cub3D's requirements state "animated sprite"](images/animation-cub3D.png)               |
 
 
-Probably due to the absence of time measurement functions, a lot of students are lost as to how they should implement animations. I often browse discord and discuss subjects with other students there.
+Probably due to the absence of time measurement functions, a lot of students are lost as to how they should implement animations. I've seen that happen multiple times, as I often browse discord to discuss subjects with other students.
 
 There are the two common workarounds to compensate for the lack of time measurement. You'll notice that they mirror the techniques used for movement aswell.
 - Tying animations to user input
